@@ -1,44 +1,32 @@
-<script>
-$(document).ready(function() {
-	idForm = '#<?php echo $this->form->getAttrib('id');?>';
-	$(idForm).validationEngine();
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello word</title>
+  </head>
+  <body>
+    <ul class="rouge">
+      <li class="impair">premier élément de la liste à puces</li>
+      <li class="pair">deuxième élément de la liste à puces</li>
+      <li class="impair">troisième élément de la liste à puces</li>
+    </ul>
+    <div>
+      <ul class="bleu">
+        <li class="impair">premier élément de la liste à puces</li>
+        <li class="pair">deuxième élément de la liste  à puces</li>
+        <li class="impair">troisième élémentt de la liste  àpuces</li>
+      </ul>
+    </div>
+    <ol class="rouge">
+      <li>premier élément de la liste numérotée</li>
+      <li>deuxième élément de la liste numérotée</li>
+      <li>troisième élément de la liste numérotée</li>
+    </ol>
+    <script src="jquery.js"></script>
+    <script>
+     $(function() {
+  $('#texteJQ').html('Hello world. Ce texte est affich� par jQuery.');
 });
-</script>
-<h1>
-	<a href=""><img src="<?php echo $this->baseUrl(); ?>/img/logo.png"
-		alt=""> </a>
-</h1>
-<div class="login-body">
-	<h2>Connexion</h2>
-	<?php if(isset($this->conError)){ ?>
-	<div class="ui-state-highlight ui-corner-all"
-		style="width: 340px; margin-left: 30px;">
-		<p>
-			<span class="ui-icon ui-icon-info" style="float: left;"></span> <span
-				class="message-text"> <?php echo $this->conError;?>
-			</span>
-		</p>
-	</div>
-	<?php }?>
-	<form name="<?php echo $this->form->getName();?>"
-		id="<?php echo $this->form->getId();?>" action=""
-		method="<?php echo $this->form->getMethod();?>" style="margin-top: 5px;">
-		<div class="email">
-			<?php echo $this->form->identifiantUser;?>
-		</div>
-		<div class="pw">
-			<?php echo $this->form->passeUser;?>
-		</div>
-		<div class="submit">
-			<input type="submit" value="Me connecter" class='btn btn-primary'>
-		</div>
-	</form>
-	<div class="forget">
-		<!-- <a
-			href="<?php echo $this->url(array('controller'=>'auth', 'action'=>'mdp-oublie','module'=>'frontend'),'default',true); ?>"><span>Mot
-				de passe oubli&eacute; </span> </a> -->
-				<a
-			href="<?php echo $this->url(array('controller'=>'auth', 'action'=>'nouveau','module'=>'frontend'),'default',true); ?>"><span>Cr&eacute;er
-				un nouveau compte</span> </a>
-	</div>
-</div>
+      </script>
+  </body>
+</html>
